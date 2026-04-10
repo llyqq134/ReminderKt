@@ -1,8 +1,7 @@
-package com.example.myapplication
+package com.example.myapplication.db
 
 import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
 
@@ -19,10 +18,11 @@ abstract class DataBase : RoomDatabase() {
         @Volatile
         private var INSTANCE: DataBase? = null
 
-        fun getDatabase(context: Context): DataBase {
+        fun getDatabase(context: Context?): DataBase {
             return INSTANCE ?: synchronized(this) {
                 buildDatabase(context).also {INSTANCE = it}
-            }
+            }APp
+
         }
 
         private fun buildDatabase(context: Context) = databaseBuilder(

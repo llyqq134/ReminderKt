@@ -52,6 +52,7 @@ dependencies {
     implementation("androidx.room:room-runtime:2.8.4")
     implementation("androidx.room:room-ktx:2.8.4")
     implementation("androidx.room:room-compiler:2.8.4")
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     testImplementation(libs.junit)
 
